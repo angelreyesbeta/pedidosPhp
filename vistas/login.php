@@ -13,7 +13,7 @@
   <form action="" method="post" class="" id="frmAcceso">
     <div class="login-logo" style="text-align: center;">
                     <a href="login.php">
-                        <img class="align-content" src="../files/logos/logosesion.png" width="250px" alt="www.aquaterra.com.co">
+                        <img class="align-content" src="../files/logos/logo.jpeg" width="250px" alt="www.aquaterra.com.co">
                     </a>
                 </div>
     <h2>Inicio de Sesión</h2>

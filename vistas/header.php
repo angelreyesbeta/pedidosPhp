@@ -28,6 +28,7 @@ if(strlen(session_id())<1)
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../dist/css/estilos.css>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,7 +41,20 @@ if(strlen(session_id())<1)
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+    
+<style type="text/css">
 
+.aEmail{
+  background-color:  #A8045D !important;
+}
+.aEmail:hover{
+  background-color:  #A8045D !important;
+}
+.dropdown-menu,.user-footer{
+  background-color:  #670E67 !important;
+}
+
+</style>
   
 
 </head>
@@ -49,7 +63,7 @@ if(strlen(session_id())<1)
 <div class="wrapper">
 
   <header class="main-header" >
-    <nav class="navbar navbar-static-top" style="background-color: pink !important">
+    <nav class="navbar navbar-static-top navheader" style="background-color: #A8045D !important">
       <div class="container">
         <div class="navbar-header">
           <a href="principal.php" class="navbar-brand" style="color: white;font-weight: bold;"><b style="color: white"></b>COMPLICES DE AMOR <i style="color: red" class="fa fa-heart"></i>
@@ -60,64 +74,37 @@ if(strlen(session_id())<1)
           </button>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <!--li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Opciones <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Realizar Lanzamiento de Menú</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Usuarios</a></li>
-          
-              </ul>
-            </li>-->
+         
           </ul>
       
         </div>
-        <!-- /.navbar-collapse -->
-        <!-- Navbar Right Menu -->
+     
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             
-            <!-- User Account Menu -->
+       
             <li class="dropdown user user-menu">
-              <!-- Menu Toggle Button -->
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <!-- The user image in the navbar-->
-                <img src="../files/usuarios/perfil.png" class="user-image" alt="User Image">
-                <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs"><?php echo $_SESSION['mail']?></span>
+         
+              <a  href="#" class="aEmail dropdown-toggle" data-toggle="dropdown" style="color:white; font-weight: bold; font-size:20px; &hover{background-color:tomato !important;}">
+            
+                <img src="../files/logos/logo.jpeg" class="user-image" alt="User Image" style="">
+            
+                <span class="aSpan hidden-xs"><?php echo $_SESSION['mail']?></span>
               </a>
               <ul class="dropdown-menu">
-                <!-- The user image in the menu -->
+    
                 <li class="user-header">
-                  <img src="../files/usuarios/perfil.png" class="img-circle" alt="User Image">
+                  <img src="../files/logos/logo.jpeg"  class="img-circle" alt="User Image">
 
                   <p>
                     <?php echo $_SESSION['mail']?>
-                    <small>Member since Nov. 2012</small>
+                    <small>ADMINISTRADORA</small>
                   </p>
                 </li>
-                <!-- Menu Body 
-                <li class="user-body">
-                  <div class="row">
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Followers</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Sales</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Friends</a>
-                    </div>
-                  </div>
-            
-                </li>-->
-                <!-- Menu Footer-->
+     
                 <li class="user-footer">
                   <div class="pull-left">
                     <a href="#" class="btn btn-default btn-flat">Perfil</a>
@@ -130,9 +117,9 @@ if(strlen(session_id())<1)
             </li>
           </ul>
         </div>
-        <!-- /.navbar-custom-menu -->
+
       </div>
-      <!-- /.container-fluid -->
+
     </nav>
   </header>
 

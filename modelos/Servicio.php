@@ -34,7 +34,7 @@ $txtprecioVenta,$txtcantidad,$fecha,$usuario)
 	{
 		/*$sql="SELECT s.id, s.descripcion,s.fecha,s.estado from servicio s order by s.fecha";*/
 
-		$sql="SELECT s.id, s.descripcion,s.fecha,s.estado, SUM(ds.cantidad) as cantidad,SUM(ds.valorTotal) as Valtotal , s.cantidad from servicio s INNER JOIN detalleservicio ds on s.id=ds.servicio WHERE s.estado='1' GROUP BY s.id";
+		$sql="SELECT s.id, s.descripcion,s.fecha,s.estado, SUM(ds.cantidad) as pedidos,SUM(ds.valorTotal) as Valtotal , s.cantidad from servicio s INNER JOIN detalleservicio ds on s.id=ds.servicio WHERE s.estado='1' GROUP BY s.id";
 
 
 		 return ejecutarConsulta($sql);

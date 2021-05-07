@@ -288,19 +288,22 @@ function cargarServicios()
                   
 
                   //alert(data1[i][3])
-
+                  
 
      document.getElementById("containerServicios").innerHTML+='<div class="col-sm-4">'+
     '<div class="card ">'+
-      '<h5 class="card-title h4" style="padding:10px;background-color:pink !important; color:#670E67; font-weight: bold;">'+data1[i][0]+' <span style="background-color:'+color+';padding: 7px 15px 5px 15px;border-radius:25px;font-size:13px;color:white;" class="ml-5">'+estado+'</span></h5>'+
+      '<h5 class="card-title h4" style="padding:10px;background-color:pink !important; color:#670E67; font-weight: bold;">'+data1[i][0]+' <span style="background-color:'+color+';padding: 0   15px 0  15px;border-radius:25px;font-size:13px;color:white;" class="ml-5">'+estado+'</span></h5>'+
     
-      '<div class="card-body" style="background-color:#6C1269 !important; color:white; font-weight:bold; text-align:center;padding:10px">'+  
-       ' <p class="card-text">'+data1[i][2]+'</p>'+
-       ' <p id="idprueba" class="card-text">Pedidos: <span class="pull badge '+color+'">'+data1[i][4]+'</span></p>'+
-       ' <p  class="card-text">Ingreso $-> <span class="pull badge bg-orange">'+data1[i][5]+'</span></p> '+
-       ' <p  class="card-text">Disponible $-> <span class="pull badge bg-orange">'+data1[i][6]+'</span></p> '+
-        '<a  href="consultaservicio.php?idServicio='+data1[i][1]+'"  class="btn btn-primary">Ver...</a>'+
-        ' <a data-toggle="modal" data-target="#modalServicio" class="btn btn-warning ml-3" onclick="probandoAndo('+data1[i][1]+');">Editar</a>'+
+      '<div class="card-body" style="background-color:#6C1269 !important; color:white;font-size:20px; font-weight:bold; text-align:center;padding:10px;display:flex; flex-direction: column;align-items: center;justify-content: center;">'+  
+       ' <p   id="idprueba" class="card-text">Pedidos: <span class="pull badge bg-pink '+color+'" style="font-size:20px; font-weight:bold;">'+data1[i][4]+'</span></p>'+
+       ' <p  class="card-text">Disponible: <span class="pull badge bg-pink"style="font-size:20px; font-weight:bold;">'+data1[i][6]+'</span></p> '+
+       ' <p  class="card-text">Ingreso:  <span class="pull badge bg-pink"style="font-size:20px; font-weight:bold;">'+data1[i][5]+'</span></p> '+
+       '<br>'+
+       '<div>'+
+          ' <a  href="consultaservicio.php?idServicio='+data1[i][1]+'"  class="btn btn-primary">Ver...</a>'+
+          ' <a data-toggle="modal" data-target="#modalServicio" class="btn btn-warning ml-3" onclick="probandoAndo('+data1[i][1]+');">Editar</a>'+       
+       '</div>'
+       
 
       '</div>'+
     '</div>'+

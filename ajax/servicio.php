@@ -41,7 +41,7 @@ $txtprecioVenta,$txtcantidad);
             	"1"=>$reg->id,
             	"2"=>$reg->fecha,
             	"3"=>$reg->estado,
-                "4"=>$reg->cantidad,
+                "4"=>$reg->pedidos,
                 "5"=>$reg->Valtotal,
                 "6"=>$reg->cantidad
             );

@@ -1,9 +1,9 @@
   <footer class="main-footer">
     <div class="container">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 1.0
+        <b>Version</b> 2.0
       </div>
-      <strong>Copyright &copy; 2020 <a href="https://adminlte.io">www.secretochocoano.com</a>.</strong> All rights
+      <strong>Copyright &copy; 2021 <a href="https://betappsoft.com">www.betappsoft.com</a>.</strong> All rights
       reserved.
     </div>
     <!-- /.container -->

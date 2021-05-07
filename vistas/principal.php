@@ -3,153 +3,97 @@
     include("header.php");
   ?>
 
+<style type="text/css">
+
+  .divservicios{
+    background-color: #670E67;
+    color:white;
+    border-radius:25px;
+    text-align:center;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .h1servicios{
+    width: 100%;
+    font-weight: bold;
+  }
+  .aServicios{
+    cursor: pointer;
+    border-radius:50px;
+  }
+  .bg-pink{
+    background-color: pink;
+    color: #670E67;
+  }
+</style>
+
 
   <!-- Full Width Column -->
-  <div class="content-wrapper" style="background-color:  white "><br>
-    <div class="container" style="background-color:  white ">
-
-      
-      <!-- Content Header (Page header) -->
-
-
-      <!-- Main content -->
+  <div class="content-wrapper" style="background-color:  #fff "><br>
+    <div class="container" style="background-color:  #fff ">
   <section class="content">
       <div class="row">
-
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <p align="" class="h1">SERVICIOS <a href="" data-toggle="modal" data-target="#modalServicio"><span class="pull-lef badge bg-pink" style="background-color: peru;color: white; font-weight: bold;padding: 10px;font-size: 20px" onclick="limpiarAgregarServicio();">+ APREGAR</span></a></p>
-          <!-- /.info-box -->
-        </div>          
-         
+        <div class="col-md-12 col-sm-12 col-xs-12 divservicios">
+          <h1 class="h1servicios">SERVICIOS</h1>
+          <a class="aServicios"  data-toggle="modal" data-target="#modalServicio"><span class="pull-lef badge " style="background-color: peru;color: white; font-weight: bold;padding: 10px;font-size: 20px" onclick="limpiarAgregarServicio();">+ Nuevo</span></a>
+        </div> 
+      </div>
+      <a href="#Abierto" class="btn btn-success" style="margin-top:3%;"  data-toggle="collapse">Servicios Abiertos</a>
+      <div id="Abierto" class="collapse in">
+        <div class="row">
+          <div class="row" align="center" >
+              <div style="display: none; " id="containerCargando"   class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <img align="center" src="../files/gif/cargando1.gif">
+              </div>
+          </div>
+        
+          <div id="containerServicios">
+        
+          </div>
+        
+        
         </div>
-<hr/>
-  <h4>Servicios Abiertos</h4>
+      </div>
+
     
-<div class="row">
-  <div class="row" align="center" >
-      <div style="display: none; " id="containerCargando"   class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <img align="center" src="../files/gif/cargando1.gif">
+
+      <a href="#AbiertoSinPedidos" class="btn btn-warning" style="margin-top:3%;"  data-toggle="collapse">Servicios Abiertos Sin pedidos</a>
+      <div id="AbiertoSinPedidos" class="collapse in">
+        <div class="row">
+          <div class="row" align="center" >
+              <div style="display: none; " id="containerCargando2"   class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <img align="center" src="../files/gif/cargando1.gif">
+              </div>
+          </div>
+        
+          <div id="containerServiciosSinPedidos">
+        
+          </div>
+        
+        
+        </div> 
       </div>
-  </div>
-
-  <div id="containerServicios">
-
-  </div>
-
-
-</div>
-<hr/>
-<h4>Servicio Abierto sin pedidos</h4>
     
-<div class="row">
-  <div class="row" align="center" >
-      <div style="display: none; " id="containerCargando2"   class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <img align="center" src="../files/gif/cargando1.gif">
-      </div>
-  </div>
-
-  <div id="containerServiciosSinPedidos">
-
-  </div>
-
-
-</div>
-<hr/>
-<h4>Servicios Cerrado</h4>
-<div class="row">
-
-  <div class="row" align="center" >
-
-      <div style="display: none; " id="containerCargando3"   class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <img align="center" src="../files/gif/cargando1.gif">
-      </div>
-  </div>
-
-  <div id="containerServiciosCerrado">
-
-  </div>
-
-
-</div>
-
-<hr/>
-
-<!--<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small>3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small>Donec id elit non mi porta.</small>
-  </a><br>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
-  </a><br>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
-  </a><br>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">List group item heading columna 6</h5>
-          <small>3 days ago</small>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+      <a href="#Cerrado" class="btn btn-danger" style="margin-top:3%;"  data-toggle="collapse">Servicios Cerrados</a>
+      <div id="Cerrado" class="collapse in">
+        <div class="row">
+        
+          <div class="row" align="center" >
+        
+              <div style="display: none; " id="containerCargando3"   class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <img align="center" src="../files/gif/cargando1.gif">
+              </div>
+          </div>
+        
+          <div id="containerServiciosCerrado">
+        
+          </div>
+        
+        
         </div>
         
       </div>
-      <div class="col-md-6">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">List group item heading columna 6</h5>
-          <small>3 days ago</small>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-        </div>
-        
-      </div>
-      
-    </div>
-    
-    
-    <small>Donec id elit non mi porta.</small>
-  </a><br>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
-  </a><br>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
-  </a>
-</div>-->
-
-
-
- 
-
-  
-  
-
-        
-
         <!-- /.box -->
       </section>
       <!-- /.content -->
